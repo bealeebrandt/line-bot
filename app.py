@@ -43,7 +43,7 @@ def handle_message(event):
     if 'Give me a sticker' in msg:
         stick_message = StickerSendMessage(
             package_id='1',
-            sticker_id='4'
+            sticker_id='1'
             )
 
         line_bot_api.reply_message(
