@@ -41,9 +41,9 @@ def handle_message(event):
     r = 'Sorry! I do not understand what you are saying?!'
 
     if 'Give me a sticker' in msg:
-        stick_message = StickerSendMessage(
+        sticker_message = StickerSendMessage(
             package_id='1',
-            sticker_id='1'
+            sticker_id='2'
             )
 
         line_bot_api.reply_message(
