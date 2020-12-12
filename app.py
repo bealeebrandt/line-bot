@@ -40,11 +40,15 @@ def handle_message(event):
     msg = event.message.text
     r = 'Sorry! I do not understand what you are saying?!'
     
-    if msg == 'hi':
+    if msg in ['hi', 'Hi']:
         r = 'hi'
     elif msg == 'have you eaten?':
         r = 'not yet'
-
+    elif msg == 'Who are you?':
+        r = 'I am a chatbot'
+    elif msg == 'reservation':
+        r = 'Do you like to make a reservation?'
+    
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=r))
